@@ -31,7 +31,23 @@ public class WhileLoops {
     */
    public static int countEvensUpTo(int n) {
        // YOUR CODE HERE
-       return -1;
+       int evenNumberCount = 0;
+       if (n < 1) {
+        return 0;
+       }
+       if (n == 1) {
+        return 0;
+       }
+       int currentNumber = 0;
+       while (currentNumber < n) {
+                    currentNumber ++;
+            if (currentNumber % 2 == 0) {
+            evenNumberCount ++;
+            
+            }
+
+       }
+       return evenNumberCount;
    }
 
 
@@ -48,7 +64,13 @@ public class WhileLoops {
     */
    public static int digitSum(int n) {
        // YOUR CODE HERE
-       return -1;
+       int sum = 0;
+       int currentNumber2 = n;
+        while (currentNumber2 > 0) {
+            sum += currentNumber2 % 10;
+            currentNumber2 /= 10;
+        }
+       return sum;
    }
 
 
@@ -73,7 +95,17 @@ public class WhileLoops {
     */
    public static int countDownBy(int start, int step) {
        // YOUR CODE HERE
-       return -1;
+       int currentNumber3 = start;
+       if (step <= 0) {
+        return start;
+       }
+       if (step > start) {
+        return start;
+       }
+       while (currentNumber3 - step >= 0) {
+        currentNumber3 -= step;
+       }
+       return currentNumber3;
    }
 
 
@@ -106,7 +138,16 @@ public class WhileLoops {
     */
    public static int weeksToReachGoal(int startBalance, int weeklyDeposit, int goalBalance) {
        // CODE HERE
-       return -1;
+       int weeks = 0;
+       int currentBalance = startBalance;
+       if (currentBalance >= goalBalance) {
+        return 0;
+       }
+       while (currentBalance < goalBalance) {
+        currentBalance += weeklyDeposit; 
+        weeks ++;
+       }
+       return weeks;
    }
 
 
@@ -141,7 +182,15 @@ public class WhileLoops {
     */
    public static int minutesUntilDead(int startPercent, int perMinuteUse) {
        //YOUR CODE HERE
-       return -1;
+       int minutes = 0;
+       if (startPercent <= 0 || perMinuteUse <= 0) {
+        return 0;
+       }
+       while (startPercent > 0) {
+        startPercent -= perMinuteUse;
+        minutes++;
+       }
+       return minutes;
    }
 }
 
